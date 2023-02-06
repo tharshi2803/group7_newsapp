@@ -25,8 +25,8 @@ const signInValidationSchema = yup.object().shape({
   password: yup.string().required('Password is required'),
 });
 
-const Login = () => {
-  const navigation = useNavigation();
+const Login = ({navigation}) => {
+  //const navigation = useNavigation();
 
   const [showPassword, setShowPassword] = useState(true);
 
