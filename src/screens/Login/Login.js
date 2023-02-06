@@ -172,7 +172,7 @@ const Login = () => {
 
         <View style={styles().footerContainer}>
           <View style={styles().footerContainerInner}>
-            <Text style={styles().newUserText}>I am new user,</Text>
+            <Text style={styles().newUserText}>If you are a new user,</Text>
 
             <TouchableOpacity onPress={() => navigation.navigate('Register')}>
               <Text
@@ -186,7 +186,6 @@ const Login = () => {
           </View>
 
           <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <Text style={{color: lightGray5}}>Skip</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
