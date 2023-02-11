@@ -14,7 +14,7 @@ import {scale} from 'react-native-size-matters';
 import {useNavigation} from '@react-navigation/native';
 import * as yup from 'yup';
 import {Formik, Field} from 'formik';
-// import {loginUser} from '../../api/index.js';
+import {loginUser} from '../../api/index.js';
 import PropTypes from 'prop-types';
 
 const signInValidationSchema = yup.object().shape({
@@ -56,19 +56,39 @@ const Login = ({navigation}) => {
             }}
             onSubmit={async values => {
               console.log('values ', values);
-              loginUser(values)
-                .then(res => {
-                  console.log('Response ', res);
-                  navigation.navigate('Home');
+              // loginUser(values)
+
+              loginUser(
+                
+                (result) => {
+                  if (result.status_code == 200) {
+                    //STORAGE.storeUser(result.customer_id);
+                    //alert(JSON.stringify(STORAGE.getUser()));
+                    navigation.navigate("welcome");
+                    {/*API.getCustomerById({ id: result.customer_id }, (res) => {
+                     alert(JSON.stringify(res));
+                      
+                    });*/}
+                  }      
+                },
+        
+                (err) => {
+                  console.log(err);
+                  alert(checkPassowrd);
+                })
+
+                /*.then(res => {
+                  //console.log('Response ', res);
+                  navigation.navigate('welcome');
                   Alert('Successfully LoggedIn');
 
-                  console.log('User coming from state', user);
-                  console.log('iosLoggedIn coming from state', isLoggedIn);
+                  //console.log('User coming from state', user);
+                  //console.log('iosLoggedIn coming from state', isLoggedIn);
                 })
                 .catch(err => {
                   console.log('Error ', err.response.data?.msg);
                   Alert(err.response.data?.msg, 'ERROR');
-                });
+                }); */
             }}>
             {({
               handleSubmit,
@@ -160,7 +180,7 @@ const Login = ({navigation}) => {
                       justifyContent: 'center',
                       alignItems: 'center',
                     }}>
-                    <Text style={{color: '#fff', marginLeft: scale(5)}}>
+                    <Text style={{color: '#000', marginLeft: scale(5)}}>
                       Login
                     </Text>
                   </TouchableOpacity>

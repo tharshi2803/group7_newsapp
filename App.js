@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './src/screens/Login/Login.js';
 import Welcome from './src/screens/Welcome/Welcome.js';
 
+
 const Stack = createNativeStackNavigator();
 
 export default function App(navigation) {
@@ -17,11 +18,12 @@ export default function App(navigation) {
           options={{title: 'News App'}}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="welcome"
           component={Welcome}
           options={{title: 'News App'}}
-        />
+        /> */}
+
       </Stack.Navigator>
     </NavigationContainer>
   );
