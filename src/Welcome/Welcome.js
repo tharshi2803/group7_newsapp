@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Platform,
+  ScrollView,
 } from 'react-native';
 
 const ENTRIES1 = [
@@ -54,17 +55,18 @@ const Welcome = ({navigation}) => {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Text
         style={[
           styles.mainHeader,
           {
-            fontSize: 33,
+            fontSize: 30,
             color: '#4c5dab',
             marginTop: 0,
           },
         ]}>
-        Welcome to News
+        Welcome to SmartX TV
       </Text>
       <Carousel
         ref={carouselRef}
@@ -76,31 +78,33 @@ const Welcome = ({navigation}) => {
         hasParallaxImages={true}
       />
 
-      <Text
-        style={[
-          styles.subtext,
-          {
-            fontSize: 25,
-            color: '#4c5dab',
-            marginTop: 0,
-          },
-        ]}>
-        Login or Register to access more features.....
-      </Text>
-      <Text
+      {/* <Text
         style={[
           styles.subtext,
           {
             fontSize: 20,
             color: '#4c5dab',
+            marginTop: 0,
+          },
+        ]}>
+          Local news, Foreign news, Sports news, space news, Interesting facts and
+        more
+        
+      </Text> */}
+      <Text
+        style={[
+          styles.subtext,
+          {
+            fontSize: 15,
+            color: '#4c5dab',
             marginTop: 2,
           },
         ]}>
-        Local news, Foreign news, Sports news, space news, Interesting facts and
-        more
+        Login or Register to access more features.....
       </Text>
-
-      <View style={styles.overlay}>
+      
+      <View >
+      <View style={{ flexDirection:"row" }}>
         <Text
           style={styles.button1}
           onPress={() => navigation.navigate('login')}>
@@ -111,8 +115,22 @@ const Welcome = ({navigation}) => {
           onPress={() => navigation.navigate('signup')}>
           Signup
         </Text>
+        </View>
+        <View style={{ flexDirection:"row" }}>
+        <Text
+          style={styles.button1}
+          onPress={() => navigation.navigate('contact')}>
+          Contact
+        </Text>
+        <Text
+          style={styles.button1}
+          onPress={() => navigation.navigate('about')}>
+          About
+        </Text>
+        </View>
       </View>
     </View>
+    </ScrollView>
   );
 };
 
@@ -121,7 +139,7 @@ export default Welcome;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 50,
+    marginTop: 0,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -156,5 +174,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: '#fff',
     textAlign: 'center',
+  },
+  buttoncontainer: {
+    flex: 1,
+    flexDirection: 'row',
   },
 });
