@@ -1,7 +1,7 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Details from './src/screens/Details/Details.js'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Register from './src/screens/Register/Register.js'
 
 const Stack = createNativeStackNavigator();
 
@@ -10,9 +10,9 @@ export default function App(navigation) {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="details"
-          component={Details}
-          options={{title: 'News App'}}
+          name="register"
+          component={Register}
+          options={{ title: 'News App' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
