@@ -40,7 +40,7 @@ const About = ({navigation}) => {
         <Text style={styles.mainHeader}> Follow us on Social Media </Text>
 
         <View style={styles.menuContainer}>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.buttonStyle}
             onPress={() => Linking.openURL('')}>
             <Image
@@ -49,9 +49,9 @@ const About = ({navigation}) => {
                 uri: '',
               }}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.buttonStyle}
             onPress={() => Linking.openURL('')}>
             <Image
@@ -60,9 +60,9 @@ const About = ({navigation}) => {
                 uri: '',
               }}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.buttonStyle}
             onPress={() => Linking.openURL('')}>
             <Image
@@ -71,7 +71,7 @@ const About = ({navigation}) => {
                 uri: '',
               }}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
     </ScrollView>

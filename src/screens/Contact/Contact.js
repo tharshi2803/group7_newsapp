@@ -39,7 +39,7 @@ const Contact = ({navigation}) => {
           <Text style={styles.labels}> Enter your name </Text>
           <TextInput
             style={styles.inputStyle}
-            placeholder={'vinod thapa'}
+            placeholder={'Suthar Shanan'}
             value={name}
             onChangeText={userdata => setName(userdata)}
           />
@@ -49,7 +49,7 @@ const Contact = ({navigation}) => {
           <Text style={styles.labels}> Enter your Email </Text>
           <TextInput
             style={styles.inputStyle}
-            placeholder={'demo@thapa.com'}
+            placeholder={'suthar@gmail.com'}
             value={email}
             onChangeText={email => setEmail(email)}
           />
@@ -59,7 +59,7 @@ const Contact = ({navigation}) => {
           <Text style={styles.labels}> Enter your mobile </Text>
           <TextInput
             style={styles.inputStyle}
-            placeholder={'Mobile No'}
+            placeholder={'076-1234567'}
             value={phone}
             onChangeText={phone => setPhone(phone)}
           />
@@ -69,7 +69,7 @@ const Contact = ({navigation}) => {
           <Text style={styles.labels}> How can we help you? </Text>
           <TextInput
             style={[styles.inputStyle, styles.multilineStyle]}
-            placeholder={'Tell us about your self'}
+            placeholder={'Your Message '}
             value={message}
             onChangeText={msg => setMessage(msg)}
             numberOfLines={5}
